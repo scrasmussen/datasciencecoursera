@@ -8,7 +8,7 @@ png(filename = "plot2.png", width = 480, height = 480)
 baltimore <- 24510
 baltimore_data <- nei[nei$fips==baltimore,]
 yearly_sum <- aggregate(Emissions ~ year, baltimore_data, sum)
-colnames(yearly_sum)[2] <- "Total Emissions Per Year"
+colnames(yearly_sum)[2] <- "PM2.5 Levels"
 plot(yearly_sum, type="o", axes=FALSE)
 title(main="Baltimore PM2.5 Output")
 axis(1, at=yearly_sum$year)
